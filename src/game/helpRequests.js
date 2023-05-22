@@ -2,14 +2,10 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import React, {useEffect, useState} from "react";
 
-function HelpRequests({helpNumber, firstModel, openWhen, handleClose, onHelpAnswer, name, popButtons}) {
-    const [popNow, setPop] = useState(false)
+function HelpRequests({helpNumber, firstModel, openWhen, handleClose, onHelpAnswer, name}) {
     let secondModelType = true; // normal - real help from user
     if (helpNumber === 1) {
         secondModelType = false; // fake help on first request
-        setTimeout(() => {
-            setPop(true)
-        }, 2000)
     }
     const firstHelpModel = "I can't identify my image. Alex and " + name +", can one of you help me?";
     const secHelpModel = "Would you like to interrupt your task to help the robot?";
@@ -24,9 +20,9 @@ function HelpRequests({helpNumber, firstModel, openWhen, handleClose, onHelpAnsw
                     <> {secondModelType ? secHelpModel : helpedAlready}</>}</Modal.Body>
                 <Modal.Footer>
                     {firstModel || (!firstModel && !secondModelType) ?
-                        <> {popNow? <Button variant="primary" onClick={onHelpAnswer}>
+                        <> <Button variant="primary" onClick={onHelpAnswer}>
                         Next
-                        </Button> : <></> }</> :
+                        </Button></> :
                         <>
                             <Button variant="primary" onClick={handleClose}>
                             No

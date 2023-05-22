@@ -178,10 +178,13 @@ function GamePage() {
     const otherUserHelps = () => {
         setHelpRequest(false);
         setRobot("\n");
+        setAlexImgSrc("white.png");
+        setImgSrc("white.png");
+        setHuman("");
         setTimeout(() => {
             setAlexHelp(true);
             setImgSrc("man_and_robot.png");
-            setHuman("Alex is helping the robot");
+            setRobot("Alex is helping the robot");
             setAlexImgSrc("white.png");
 
         },1500);
@@ -250,9 +253,9 @@ function GamePage() {
                                     <div className={"virtual-player-status-div"}>
                                         {/* The model is the popup for the help request*/}
                                         <HelpRequests openWhen={needsHelp} onHelpAnswer={firstModel} firstModel={true}
-                                                      helpNumber={currentHelpNum} name={name} handleClose={""} popButtons={false}/>
+                                                      helpNumber={currentHelpNum} name={name} handleClose={""}/>
                                         <HelpRequests openWhen={clickedNext} onHelpAnswer={onHelpAnswer} firstModel={false}
-                                                      helpNumber={currentHelpNum} handleClose={handleClose} name={""} popButtons={false}/>
+                                                      helpNumber={currentHelpNum} handleClose={handleClose} name={""}/>
 
                                     </div>
                                     {/* The left side of the screen, presenting the robot and the other user gif and his

@@ -93,7 +93,7 @@ function UserFeedbackPage() {
             isRequired: true
           }, {
             type: "comment",
-            name: "Q6",
+            name: "Q7",
             title: "Any technical issues experienced or other thoughts?",
             isRequired: true
           }
