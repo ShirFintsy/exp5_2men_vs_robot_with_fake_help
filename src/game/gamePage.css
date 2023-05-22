@@ -179,20 +179,22 @@
 }
 
 .robot-text {
+    alignment-baseline: center;
     font-size: 25px;
     /*float: right;*/
-    margin-top: 40px;
+    /*margin-top: 40px;*/
 }
 
 .human-text {
     font-size: 25px;
+    width: 70%;
     float: right;
-    margin-top: 40px;
-    margin-right: 40px;
+    padding: 5%;
 }
 
 .robot-pic {
-    width: 200px;
+    /*width: 200px;*/
+    width: 40%;
     height: auto;
     padding-bottom: 15px;
     /*padding-bottom: 10px;*/
@@ -200,10 +202,10 @@
 }
 
 .Alex-pic {
-    width: 120px;
+    width: 20%;
     height: auto;
     display: inline-block;
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
 

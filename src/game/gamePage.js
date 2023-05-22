@@ -42,7 +42,7 @@ function GamePage() {
      */
     useEffect(() => {
         // Change the page to pop up notification about help
-        if (score === 19 || score === 31 || score === 50 || score === 66) {
+        if (score === 29 || score === 45 || score === 61 || score === 77) {
             setHelpRequest(true);
             nextHelpNum(currentHelpNum + 1); // count the help request number
         }
@@ -201,10 +201,10 @@ function GamePage() {
      * other user's task.
      */
     const onHelpAnswer = () => {
-        if (score === 19) {setHelpArray(oldArray => [...oldArray, 1]);}
-        if (score === 31) {setHelpArray(oldArray => [...oldArray, 2]);}
-        if (score === 50) {setHelpArray(oldArray => [...oldArray, 3]);}
-        if (score === 66) {setHelpArray(oldArray => [...oldArray, 4]);}
+        if (score === 29) {setHelpArray(oldArray => [...oldArray, 1]);}
+        if (score === 45) {setHelpArray(oldArray => [...oldArray, 2]);}
+        if (score === 61) {setHelpArray(oldArray => [...oldArray, 3]);}
+        if (score === 77) {setHelpArray(oldArray => [...oldArray, 4]);}
         if (currentHelpNum === 1) {
             otherUserHelps();
             handleClose();
@@ -250,13 +250,13 @@ function GamePage() {
                                     <div className={"virtual-player-status-div"}>
                                         {/* The model is the popup for the help request*/}
                                         <HelpRequests openWhen={needsHelp} onHelpAnswer={firstModel} firstModel={true}
-                                                      helpNumber={currentHelpNum} name={name} handleClose={""}/>
+                                                      helpNumber={currentHelpNum} name={name} handleClose={""} popButtons={false}/>
                                         <HelpRequests openWhen={clickedNext} onHelpAnswer={onHelpAnswer} firstModel={false}
-                                                      helpNumber={currentHelpNum} handleClose={handleClose} name={""}/>
+                                                      helpNumber={currentHelpNum} handleClose={handleClose} name={""} popButtons={false}/>
 
                                     </div>
-                                    {/* The left-down side of the screen, presenting the other user gif and his current
-                                     state */}
+                                    {/* The left side of the screen, presenting the robot and the other user gif and his
+                                     current state */}
                                     <div className={AlexHelp ? "block" : "match-parent"}>
                                         <div className={"robot-text"}> {robotRunning} </div>
                                         <img src={robotImgSrc} alt={"robot-pic"} className={"robot-pic"}/>

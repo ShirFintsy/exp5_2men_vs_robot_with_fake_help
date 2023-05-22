@@ -64,7 +64,8 @@ function UserFeedbackPage() {
             title: "Explain why",
             visibleIf: "{Q4} = More || {Q4} = Less || {Q4} = Same",
             isRequired: true
-          } ,{
+          }]}, {
+        "elements": [{
             type: "radiogroup",
             name: "Q5",
             title: "In your opinion, if there were more people that could have help the robot (other than you and Alex), " +
@@ -76,6 +77,19 @@ function UserFeedbackPage() {
             name: "Q5 explanation",
             title: "Explain why",
             visibleIf: "{Q5} = More || {Q5} = Less || {Q5} = Same",
+            isRequired: true
+          },{
+            type: "radiogroup",
+            name: "Q6",
+            title: "In your opinion, do you believe that Alex's response to the robot's request affected you to help " +
+                "more or less?",
+            isRequired: true,
+            "choices": [ "More", "Less", "Same"]
+          },{
+            type: "comment",
+            name: "Q6 explanation",
+            title: "Explain why",
+            visibleIf: "{Q6} = More || {Q6} = Less || {Q6} = Same",
             isRequired: true
           }, {
             type: "comment",
