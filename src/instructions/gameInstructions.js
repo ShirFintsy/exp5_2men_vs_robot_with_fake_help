@@ -31,8 +31,9 @@ function GameInstructions() {
         in parallel (classifying a different set of pictures).<br/>
         From time to time the robot will probably have trouble correctly identifying if it is a dog or a cat in its
           picture. When this occurs, the robot will ask for help. Both you and Alex can help the robot. It is up to you
-        to decide if you want to help the robot or leave it to Alex. Choosing to help the robot means you cannot
-        progress with your own classification task.<br/>
+        to decide if you want to help the robot or not. If you do not help (or delay your response), Alex may help the
+        robot or may not. Choosing to help the robot means you cannot progress with your own classification task until
+        you finished helping.<br/>
         <span style={{"fontWeight": "bold", "fontSize": "calc(1.2rem + .5vw)", "color": "red"}}> Notice! &nbsp;</span>
         <span style={{"fontWeight": "bold"}}>Helping the robot takes time as we need to save your current state and
           stream the robot's task instead (and then switch back). We estimate this interruption to take around 30-40

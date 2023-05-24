@@ -9,7 +9,7 @@ function HelpRequests({helpNumber, firstModel, openWhen, handleClose, onHelpAnsw
     }
     const firstHelpModel = "I can't identify my image. Alex and " + name +", can one of you help me?";
     const secHelpModel = "Would you like to interrupt your task to help the robot?";
-    const helpedAlready = "Alex already answer the robot's request. Thank you anyway..."
+    const helpedAlready = "Alex already agreed to help the robot. Thank you anyway..."
     return (
         <>
             <Modal show={openWhen}>
